@@ -16,7 +16,7 @@ function debounce(func, wait) {
     In case you want to use the actual api, I will leave the code in comment.
   */
 
-const coinsUrl = "/js/data.json";
+const coinsUrl = "js/data.json";
 const coinsRateUrl = "https://api.coingecko.com/api/v3/coins";
 // const coinsUrl = "https://api.coingecko.com/api/v3/coins/list"; // Real API code
 
