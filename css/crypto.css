@@ -1,0 +1,658 @@
+/* Choose the fonts */
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Titillium+Web:wght@300&family=Tilt+Neon&family=Orbitron:wght@500&family=Righteous&family=Tourney:ital,wght@1,200&display=swap");
+
+body {
+  font-family: "Orbitron", sans-serif;
+}
+
+h1 {
+  font-family: "Tourney", cursive;
+  font-size: 4rem;
+  z-index: 1;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-family: "Tilt Neon", cursive;
+}
+
+h5 {
+  font-size: 18px;
+  font-family: "Titillium Web", sans-serif;
+}
+
+#header {
+  padding: 30px;
+  background-image: url(../assets/btc8.png);
+  color: #23b574;
+  font-size: 20px;
+  width: 100%;
+  height: 125px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+}
+
+.headerImg {
+  width: 120px;
+  height: 115px;
+  float: right;
+  margin-top: -20px;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.wholeBar {
+  height: 50px;
+  width: 100%;
+  display: inline-block;
+  position: fixed;
+  top: 125px;
+  z-index: 1;
+  left: 0;
+  background-color: white;
+}
+
+nav {
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  color: #23b574;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: black;
+  border-radius: 30px;
+  border: 1px solid black;
+  padding: 7px;
+  margin-bottom: 25px;
+  margin-top: 5px;
+  margin-left: 7px;
+  position: sticky;
+  text-decoration: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #23b574;
+}
+
+nav li:hover,
+.searchBtn:hover,
+nav a:hover {
+  color: black;
+  background-color: #23b574;
+  border: 1px solid #23b574;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+nav li:focus,
+nav a:focus {
+  color: black;
+  background-color: #23b574;
+  border: 1px solid #23b574;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.searchBar {
+  display: inline-block;
+  float: right;
+  position: relative;
+  margin-top: -63px;
+  margin-right: 7px;
+}
+
+.searchInp {
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: "Orbitron", sans-serif;
+  text-align: center;
+  padding: 7px;
+  margin-bottom: 25px;
+  border: 1px solid lightgray;
+  width: 150px;
+  display: inline-block;
+}
+
+.searchBtn {
+  color: #23b574;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: black;
+  border-radius: 30px;
+  border: 2px solid black;
+  padding: 7px;
+  margin-bottom: 25px;
+  margin-left: 10px; /* Add margin to separate from input field */
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Orbitron", sans-serif;
+}
+
+/* Make home page, coins, show up and don't show the other two */
+.coins #allCoins {
+  display: grid;
+}
+.coins #liveReports {
+  display: none;
+}
+.coins #about {
+  display: none;
+}
+
+/* Make about show up and don't show the other two */
+.about #allCoins {
+  display: none;
+}
+.about #liveReports {
+  display: none;
+}
+.about #about {
+  display: block;
+}
+
+/* Make live reports show up and don't show the other two */
+.liveRepo #allCoins {
+  display: none;
+}
+.liveRepo #liveReports {
+  display: block;
+}
+.liveRepo #about {
+  display: none;
+}
+
+#allCoins {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  margin-bottom: 15px;
+  margin-top: 200px;
+  grid-template-columns: repeat(3, 1fr); /* 1/3 */
+}
+
+#allCoins div {
+  border: 1px solid lightgray;
+  float: left;
+  padding: 15px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  float: right;
+  width: 60px;
+  height: 34px;
+  margin-top: 3px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.modalStyle {
+  color: darkorange;
+}
+
+#liveReports {
+  margin-top: 220px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#liveReports h1 {
+  font-family: "Righteous", cursive;
+  font-size: 50px;
+  text-align: center;
+  background-image: linear-gradient(45deg, green, black);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+#chartContainer {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+.aboutMain {
+  margin-top: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Tilt Neon", cursive;
+}
+
+.allAbout {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 23px;
+}
+
+.card {
+  width: 100px;
+  border-radius: 30px;
+  margin-left: 10px;
+}
+
+.card-img-top {
+  width: 100%;
+  border-radius: 30px;
+}
+
+.card-title {
+  color: white;
+  width: 100%;
+  font-size: 25px;
+}
+
+.card-text {
+  color: white;
+  font-size: 18px;
+  width: 100%;
+}
+
+.col-md-8 {
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+  padding: 20px;
+  width: 100%;
+}
+
+.col-md-8 > h3 {
+  text-decoration: underline;
+}
+
+#about > h1 {
+  font-family: "Righteous", cursive;
+  font-size: 50px;
+  text-align: center;
+  background-image: linear-gradient(45deg, green, black);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.withinTextLiveRepo {
+  text-decoration: underline;
+  color: #2196f3;
+}
+
+.withinTextLiveRepo:hover {
+  cursor: pointer;
+}
+
+.withinTextLiveRepo:active {
+  color: purple;
+}
+
+.withinTextHome {
+  text-decoration: underline;
+  color: #2196f3;
+}
+
+.withinTextHome:hover {
+  cursor: pointer;
+}
+
+.withinTextHome:active {
+  color: purple;
+}
+
+.modal-title {
+  font-family: "Orbitron", sans-serif;
+  font-weight: bolder;
+  font-size: 23px;
+  width: 100%;
+}
+
+#removedCoin {
+  text-align: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  padding: 3px;
+  width: 80px;
+  text-transform: uppercase;
+}
+
+.moreInfoBtn {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Tilt Neon", cursive;
+  margin-top: 4px;
+  padding: 0;
+  width: 100px;
+  height: 40px;
+  float: left;
+}
+
+.infoBtnRate {
+  text-transform: uppercase;
+  color: #23b574;
+}
+
+.collapse {
+  margin-top: 15px;
+  margin-bottom: 0;
+  padding: 0%;
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+
+.border-info {
+  width: 100%;
+  padding: 0%;
+  text-align: center;
+}
+
+.removed {
+  color: red;
+}
+
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#progress-bar img {
+  max-width: 20%;
+}
+
+/* For mobile phones: */
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  #header {
+    padding: 30px;
+    background: black;
+    color: #23b574;
+    font-size: 20px;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+  }
+
+  .headerImg {
+    width: 100px;
+    float: right;
+    height: 90px;
+    border-radius: 10px;
+    z-index: 1;
+    margin-top: -20px;
+    margin-right: -30px;
+  }
+
+  .wholeBar {
+    height: 105px;
+    width: 100%;
+    top: 100px;
+    z-index: 1;
+    left: 0;
+    background-color: white;
+  }
+
+  nav {
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav li {
+    color: #23b574;
+    font-size: 10px;
+    font-weight: bold;
+    background-color: black;
+    border-radius: 30px;
+    border: 1px solid black;
+    padding: 7px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    margin-right: 5px;
+    width: 25%;
+    height: auto;
+    position: sticky;
+  }
+
+  nav li:hover,
+  .searchBtn:hover {
+    color: black;
+    background-color: #23b574;
+    border: 1px solid #23b574;
+    cursor: pointer;
+  }
+
+  .searchInp {
+    font-family: "Orbitron", sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-left: 10px;
+    float: left;
+    width: 80%;
+  }
+
+  .searchBtn {
+    color: #23b574;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: black;
+    border-radius: 30px;
+    border: 2px solid black;
+    padding: 7px;
+    margin-bottom: 25px;
+    margin-left: 10px; /* Add margin to separate from input field */
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Orbitron", sans-serif;
+  }
+
+  #allCoins {
+    width: 99%;
+    height: auto;
+    flex-direction: row;
+    display: grid;
+    margin-left: 1px;
+    margin-bottom: 15px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #allCoins div {
+    border: 1px solid lightgray;
+    float: left;
+    padding: 15px;
+    height: auto;
+    width: 100%;
+  }
+
+  #allCoins h2 {
+    font-size: 18px;
+  }
+
+  #allCoins h5 {
+    font-size: 10px;
+  }
+
+  .moreInfoBtn {
+    margin-top: 8px;
+    margin-left: -5px;
+    bottom: 0;
+    width: 80px;
+    height: 25px;
+    padding: 2px;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: "Tilt Neon", cursive;
+  }
+
+  /* The switch - the box around the slider */
+  .switch {
+    position: relative;
+    float: right;
+    width: 50px;
+    height: 25px;
+    margin-top: 3px;
+  }
+
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 2.5px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  .collapse {
+    margin-top: 5px;
+  }
+
+  .aboutMain {
+    margin-top: 200px;
+  }
+
+  .allAbout {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+  }
+
+  .card {
+    width: 100px;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .col-md-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .col-md-8 > h3 {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .collapse {
+    margin-top: 5px;
+  }
+}
