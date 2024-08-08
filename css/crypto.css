@@ -620,13 +620,13 @@ input:checked + .slider:before {
 
   #allCoins {
     margin-top: 140px; /* Ensure content is not hidden by the navbar and search bar */
-    margin-bottom: 180px; /* Increased bottom margin for all main sections */
+    margin-bottom: 200px; /* Increased bottom margin for all main sections */
     padding: 0; /* Remove any padding */
   }
 
   #about {
     margin-top: 140px; /* Ensure content is not hidden by the navbar and search bar */
-    margin-bottom: 150px; /* Increased bottom margin for all main sections */
+    margin-bottom: 200px; /* Increased bottom margin for all main sections */
     padding: 0; /* Remove any padding */
   }
 
